@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Set up /etc/default/autopostgresqlbackup and $HOME/.pgpass with
+# configuration from the environment, and then run autopostgresqlbackup.
+# Configuring it this way allows us to use values specified in the
+# environment and to avoid making any changes to autopostgresqlbackup from
+# upstream.
+# Depends on /etc/autopostgresqlbackup as an envdir-style directory- see
+# https://cr.yp.to/daemontools/envdir.html. This is because SSH doesn't pass
+# most environment variables through to shells.
+
+envdir /etc/autopostgresqlbackup /usr/local/bin/configure-autopostgresqlbackup
+/usr/local/bin/autopostgresqlbackup

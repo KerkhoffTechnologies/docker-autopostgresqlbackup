@@ -1,0 +1,7 @@
+.env
+.idea/
+.svn
+*.pyc
+__pycache__
+requirements.lock
+*.swp

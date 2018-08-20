@@ -1,0 +1,10 @@
+Port 22
+Protocol 2
+PermitRootLogin without-password
+ChallengeResponseAuthentication no
+X11Forwarding no
+AllowTCPForwarding no
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem sftp internal-sftp
+ClientAliveInterval 120

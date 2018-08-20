@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Set up /etc/default/autopostgresqlbackup and $HOME/.pgpass with
+# configuration from the environment.
+mkdir --parent /etc/default/
+
+cat > /etc/default/autopostgresqlbackup <<- EOF
+USERNAME=${USERNAME}
+DBHOST=${DBHOST}
+DBNAMES="${DBNAMES}"
+MDBNAMES="${MDBNAMES}"
+DBEXCLUDE="${DBEXCLUDE}"
+CREATE_DATABASE=${CREATE_DATABASE}
+BACKUPDIR="${BACKUPDIR}"
+SEPDIR=${SEPDIR}
+OPT="${OPT}"
+MAILCONTENT="${MAILCONTENT}"
+MAXATTSIZE="${MAXATTSIZE}"
+MAILADDR="${MAILADDR}"
+EOF
+cat /etc/default/autopostgresqlbackup
+
+INITIAL_UMASK=$(umask -p)
+umask 0177
+cat > /root/.pgpass <<- EOF
+${DBHOST}:*:*:${USERNAME}:${DBPASS}
+EOF
+${INITIAL_UMASK}
