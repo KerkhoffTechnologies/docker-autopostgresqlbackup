@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Richard Clark <richard@kerkhofftech.ca>
+MAINTAINER Curtis Hildebrand <curtis@craftypenguins.net>
 
 # Gzip (the real one, not from BusyBox) is needed for autopostgresqlbackup
 # Rsync is needed for BackupPC

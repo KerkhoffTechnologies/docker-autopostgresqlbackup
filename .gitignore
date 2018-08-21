@@ -5,3 +5,6 @@
 __pycache__
 requirements.lock
 *.swp
+
+# Temporarily ignore these:
+Jenkinsfile

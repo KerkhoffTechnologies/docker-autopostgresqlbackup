@@ -1,5 +1,5 @@
 def dockerImage
-def localTag = "qeye/docker-autopostgresqlbackup:${env.BRANCH_NAME}-${env.BUILD_ID}"
+def localTag = "cpcurtis/autopostgresqlbackup:${env.BRANCH_NAME}-${env.BUILD_ID}"
 def gitlabTag = "${env.BRANCH_NAME}"  // Gitlab only gets branch tags
 
 pipeline {
