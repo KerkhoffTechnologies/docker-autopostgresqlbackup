@@ -12,6 +12,7 @@ Key environment variables:
 * `USERNAME`: PostgreSQL username
 * `DBPASS`: PostgreSQL password
 * `DBNAMES`: space-separated list of DBs to back up (omit to back up everything)
+* `DBEXCLUDE`: space-separated list of DBs to exlcude
 
 See `backup-postgresql` and configure-autopostgresqlbackup for a more complete list of variables.
 
